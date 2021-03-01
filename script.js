@@ -33,3 +33,8 @@ const timingEffectReverse = {
 button_rev.onclick = function () {
     animation = ballElement.animate(keyframes, timingEffectReverse);
 };
+
+function onRangeChange (value) {
+    animation.updatePlaybackRate(value)
+    document.getElementById('range').innerHTML = value;
+}
