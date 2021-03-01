@@ -13,12 +13,23 @@ const timingEffect = {
     iterations: Infinity,
 }
 
-const animation = ballElement.animate(keyframes, timingEffect)
+let animation = ballElement.animate(keyframes, timingEffect);
 
-let button = document.querySelector('.button');
+let button_pp = document.querySelector('.button_pp');
 
-button.onclick = function () {
+button_pp.onclick = function () {
     animation.playState === "running"
     ? animation.pause()
     : animation.play();
-}
+};
+
+let button_rev = document.querySelector('.button_rev');
+const timingEffectReverse = {
+    duration: 2000,
+    direction: "reverse",
+    iterations: Infinity,
+};
+
+button_rev.onclick = function () {
+    animation = ballElement.animate(keyframes, timingEffectReverse);
+};
