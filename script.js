@@ -14,3 +14,11 @@ const timingEffect = {
 }
 
 const animation = ballElement.animate(keyframes, timingEffect)
+
+let button = document.querySelector('.button');
+
+button.onclick = function () {
+    animation.playState === "running"
+    ? animation.pause()
+    : animation.play();
+}
